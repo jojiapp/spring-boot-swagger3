@@ -1,14 +1,13 @@
 package com.jojiapp.springswagger.member.controller;
 
 import io.swagger.annotations.*;
-import io.swagger.v3.oas.annotations.*;
-import io.swagger.v3.oas.annotations.media.*;
 import io.swagger.v3.oas.annotations.tags.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "회원", description = "회원 API")
 @RestController
+@RequestMapping("/members")
 public class MemberController {
 
     @Tag(name = "회원")
@@ -47,6 +46,7 @@ public class MemberController {
     })
     @GetMapping
     public MemberResponse getByName(final String name) {
+
         return new MemberResponse();
     }
 
